@@ -1,0 +1,33 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Keep project configuration and local reference resources trackable
+!package.json
+!package-lock.json
+!tsconfig*.json
+!eslint.config.*
+!prettier.config.*
+!openspec/config.yaml
+!openspec/changes/**/.openspec.yaml
+!raw_resources/**
