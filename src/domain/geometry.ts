@@ -5,6 +5,7 @@ export function createMasterBedroom(width = 4, depth = 5): Room { const w = mete
 export function wall(wallId: string, x1: number, z1: number, x2: number, z2: number): Wall { return { id: id(wallId), start: { x: meters(x1), z: meters(z1) }, end: { x: meters(x2), z: meters(z2) }, thickness: meters(.1), height: meters(2.5) }; }
 const replace = <T extends Room>(room: T, part: Partial<T>): T => ({ ...room, ...part });
 export const addWall = (room: Room, value: Wall) => replace(room, { walls: [...room.walls, value] });
+export const resizeRoom = (room: Room, dimensions: Room['dimensions']) => replace(room, { dimensions });
 export const moveWall = (room: Room, wallId: Id, dx: number, dz: number) => replace(room, { walls: room.walls.map(w => w.id === wallId ? { ...w, start: { x: meters(w.start.x + dx), z: meters(w.start.z + dz) }, end: { x: meters(w.end.x + dx), z: meters(w.end.z + dz) } } : w) });
 export const resizeWall = (room: Room, wallId: Id, end: Wall['end']) => replace(room, { walls: room.walls.map(w => w.id === wallId ? { ...w, end } : w) });
 export const deleteWall = (room: Room, wallId: Id) => replace(room, { walls: room.walls.filter(w => w.id !== wallId), doors: room.doors.filter(o => o.wallId !== wallId), windows: room.windows.filter(o => o.wallId !== wallId) });
