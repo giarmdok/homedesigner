@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { createMasterBedroom, id, meters } from '../domain/geometry';
 import { validateRoom } from '../domain/room-validation';
+import { createFurniture, diagnoseFurniture } from '../domain/furniture';
 import type { MeasuredPhoto, ProjectSnapshot } from '../domain/model';
 import './app.css';
 const initial = { schemaVersion: 1, id: id('master-bedroom-project'), name: 'Master Bedroom', unit: 'm', rooms: [createMasterBedroom()], assets: [], materials: [] } as ProjectSnapshot;

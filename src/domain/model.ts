@@ -12,7 +12,7 @@ export interface Wall { readonly id: Id; readonly start: { readonly x: Meters; r
 export interface Door { readonly id: Id; readonly wallId: Id; readonly offset: Meters; readonly width: Meters; readonly height: Meters }
 export interface Window { readonly id: Id; readonly wallId: Id; readonly offset: Meters; readonly width: Meters; readonly height: Meters; readonly sillHeight: Meters }
 export interface Asset { readonly id: Id; readonly uri: string; readonly name: string; readonly mimeType: string }
-export interface Furniture { readonly id: Id; readonly name: string; readonly assetId?: Id; readonly dimensions: Dimensions; readonly transform: Transform; readonly materialId?: Id }
+export interface Furniture { readonly id: Id; readonly name: string; readonly source: 'catalog' | 'manual'; readonly assetId?: Id; readonly dimensions: Dimensions; readonly transform: Transform; readonly appearance: { readonly color: Color; readonly materialId?: Id } }
 export interface Room { readonly id: Id; readonly name: string; readonly dimensions: Dimensions; readonly walls: readonly Wall[]; readonly doors: readonly Door[]; readonly windows: readonly Window[]; readonly furniture: readonly Furniture[] }
 export interface Project { readonly schemaVersion: typeof SCHEMA_VERSION; readonly id: Id; readonly name: string; readonly unit: Unit; readonly rooms: readonly Room[]; readonly assets: readonly Asset[]; readonly materials: readonly Material[]; readonly measuredPhoto?: MeasuredPhoto; readonly wallConnectivityJustified?: boolean }
 export type ProjectSnapshot = Readonly<Project>;
