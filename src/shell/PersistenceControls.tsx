@@ -1,0 +1,4 @@
+import { useState } from 'react';
+import type { ProjectSnapshot } from '../domain/model';
+import { createLocalRepository } from '../services/persistence';
+export function PersistenceControls({ project, onLoaded }: { project: ProjectSnapshot; onLoaded: (project: ProjectSnapshot) => void }) { const [message,setMessage]=useState(''); const repo=createLocalRepository(); const save=async()=>{try{await repo.save(project);setMessage('Saved locally.')}catch(e){setMessage((e as Error).message)}}; const load=async()=>{try{const next=await repo.load();if(next) onLoaded(next);setMessage(next?'Loaded safely.':'No saved project found.')}catch(e){setMessage((e as Error).message)}}; return <div className="persistence"><button onClick={save}>Save project</button><button onClick={load}>Load project</button>{message&&<small role="status">{message}</small>}</div>; }
