@@ -13,6 +13,8 @@ export interface Door { readonly id: Id; readonly wallId: Id; readonly offset: M
 export interface Window { readonly id: Id; readonly wallId: Id; readonly offset: Meters; readonly width: Meters; readonly height: Meters; readonly sillHeight: Meters; readonly kind?: 'window' }
 export interface Asset { readonly id: Id; readonly uri: string; readonly name: string; readonly mimeType: string }
 export interface Furniture { readonly id: Id; readonly name: string; readonly source: 'catalog' | 'manual'; readonly assetId?: Id; readonly dimensions: Dimensions; readonly transform: Transform; readonly appearance: { readonly color: Color; readonly materialId?: Id } }
-export interface Room { readonly id: Id; readonly name: string; readonly dimensions: Dimensions; readonly walls: readonly Wall[]; readonly doors: readonly Door[]; readonly windows: readonly Window[]; readonly furniture: readonly Furniture[] }
-export interface Project { readonly schemaVersion: typeof SCHEMA_VERSION; readonly id: Id; readonly name: string; readonly unit: Unit; readonly rooms: readonly Room[]; readonly assets: readonly Asset[]; readonly materials: readonly Material[]; readonly measuredPhoto?: MeasuredPhoto; readonly wallConnectivityJustified?: boolean }
+export interface Room { readonly id: Id; readonly name: string; readonly dimensions: Dimensions; readonly walls: readonly Wall[]; readonly doors: readonly Door[]; readonly windows: readonly Window[]; readonly furniture: readonly Furniture[]; readonly floorMaterialId?: Id }
+export type PaletteSource = 'image' | 'manual' | 'ai';
+export interface PaletteEntry { readonly id: Id; readonly name: string; readonly color: Color; readonly source: PaletteSource }
+export interface Project { readonly schemaVersion: typeof SCHEMA_VERSION; readonly id: Id; readonly name: string; readonly unit: Unit; readonly rooms: readonly Room[]; readonly assets: readonly Asset[]; readonly materials: readonly Material[]; readonly palette?: readonly PaletteEntry[]; readonly measuredPhoto?: MeasuredPhoto; readonly wallConnectivityJustified?: boolean }
 export type ProjectSnapshot = Readonly<Project>;

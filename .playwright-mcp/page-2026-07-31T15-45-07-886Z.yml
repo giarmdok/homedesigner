@@ -1,0 +1,71 @@
+- main [ref=e3]:
+  - generic [ref=e4]:
+    - text: HOME DESIGNER
+    - heading "Master Bedroom" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Measured room editor · displaying feet & inches (ft/in)
+  - generic [ref=e7]:
+    - img "2D room plan" [ref=e9]:
+      - generic [ref=e11]: Master Bedroom
+      - generic [ref=e12]: "13′ 1.5″ × 16′ 4.9″ (H: 8′ 2.4″)"
+    - complementary [ref=e13]:
+      - heading "Measured plan" [level=2] [ref=e14]
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: Display Units
+          - radiogroup "Display unit preference" [ref=e18]:
+            - button "Feet & Inches (ft/in)" [ref=e19] [cursor=pointer]
+            - button "Meters (m)" [ref=e20] [cursor=pointer]
+        - paragraph [ref=e21]: UI displays measurements in feet & inches. Storage and domain calculations remain canonical in meters (m).
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e24]: "Current State:"
+          - generic [ref=e25]: No photo selected
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - generic [ref=e28]: "1"
+            - generic [ref=e29]: Choose a measured room photo
+          - listitem [ref=e30]:
+            - generic [ref=e31]: "2"
+            - generic [ref=e32]: Review the reference
+          - listitem [ref=e33]:
+            - generic [ref=e34]: "3"
+            - generic [ref=e35]: Calibrate using a known measurement
+          - listitem [ref=e36]:
+            - generic [ref=e37]: "4"
+            - generic [ref=e38]: Review validation
+          - listitem [ref=e39]:
+            - generic [ref=e40]: "5"
+            - generic [ref=e41]: Finalize the plan
+      - generic [ref=e42]:
+        - heading "Room Dimensions" [level=3] [ref=e43]
+        - paragraph [ref=e44]:
+          - text: "Current:"
+          - strong [ref=e45]: "13′ 1.5″ × 16′ 4.9″ (H: 8′ 2.4″)"
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]: Width
+            - generic [ref=e49]:
+              - spinbutton [ref=e50]: "13"
+              - generic [ref=e51]: ft
+              - spinbutton [ref=e52]: "1.5"
+              - generic [ref=e53]: in
+          - generic [ref=e54]:
+            - generic [ref=e55]: Depth
+            - generic [ref=e56]:
+              - spinbutton [ref=e57]: "16"
+              - generic [ref=e58]: ft
+              - spinbutton [ref=e59]: "4.9"
+              - generic [ref=e60]: in
+      - generic [ref=e62]:
+        - generic [ref=e63]: Photo reference
+        - button "Photo reference" [ref=e64] [cursor=pointer]
+      - generic [ref=e65]:
+        - generic [ref=e66]: Furniture image
+        - button "Furniture image" [ref=e67] [cursor=pointer]
+      - heading "Validation" [level=3] [ref=e68]
+      - list [ref=e69]:
+        - listitem [ref=e70]: Calibrate the measured photo with positive pixel and meter references.
+      - generic [ref=e71]:
+        - button "Save project" [ref=e72] [cursor=pointer]
+        - button "Load project" [ref=e73] [cursor=pointer]
+      - button "Finalize plan" [disabled] [ref=e74]

@@ -1,0 +1,143 @@
+- main [ref=f3e3]:
+  - generic [ref=f3e4]:
+    - text: HOME DESIGNER
+    - heading "Master Bedroom" [level=1] [ref=f3e5]
+    - paragraph [ref=f3e6]: Measured room editor · displaying feet & inches (ft/in)
+  - generic [ref=f3e7]:
+    - generic [ref=f3e8]:
+      - img "2D room plan" [ref=f3e9]:
+        - generic:
+          - generic "Select north wall"
+        - generic:
+          - generic "Select east wall"
+        - generic:
+          - generic "Select south wall"
+        - generic:
+          - generic "Select west wall"
+        - generic: 13′ 1.5″
+        - generic: 16′ 4.9″
+        - generic: 13′ 1.5″
+        - generic: 16′ 4.9″
+        - generic [ref=f3e11]: Master Bedroom
+        - generic [ref=f3e12]: "13′ 1.5″ × 16′ 4.9″ (H: 8′ 2.4″)"
+      - paragraph [ref=f3e13]: Click a wall segment to select it for color application.
+    - complementary [ref=f3e14]:
+      - heading "Measured plan" [level=2] [ref=f3e15]
+      - generic [ref=f3e16]:
+        - generic [ref=f3e17]:
+          - generic [ref=f3e18]: Display Units
+          - radiogroup "Display unit preference" [ref=f3e19]:
+            - button "Feet & Inches (ft/in)" [ref=f3e20] [cursor=pointer]
+            - button "Meters (m)" [ref=f3e21] [cursor=pointer]
+        - paragraph [ref=f3e22]: UI displays measurements in feet & inches. Storage and domain calculations remain canonical in meters (m).
+      - generic [ref=f3e23]:
+        - generic [ref=f3e24]:
+          - generic [ref=f3e25]: "Current State:"
+          - generic [ref=f3e26]: Photo selected (not calibrated)
+        - list [ref=f3e27]:
+          - listitem [ref=f3e28]:
+            - generic [ref=f3e29]: "1"
+            - generic [ref=f3e30]: Choose a measured room photo
+          - listitem [ref=f3e31]:
+            - generic [ref=f3e32]: "2"
+            - generic [ref=f3e33]: Review the reference
+          - listitem [ref=f3e34]:
+            - generic [ref=f3e35]: "3"
+            - generic [ref=f3e36]: Calibrate using a known measurement
+          - listitem [ref=f3e37]:
+            - generic [ref=f3e38]: "4"
+            - generic [ref=f3e39]: Review validation
+          - listitem [ref=f3e40]:
+            - generic [ref=f3e41]: "5"
+            - generic [ref=f3e42]: Finalize the plan
+      - generic [ref=f3e43]:
+        - heading "Room Dimensions" [level=3] [ref=f3e44]
+        - paragraph [ref=f3e45]:
+          - text: "Current:"
+          - strong [ref=f3e46]: "13′ 1.5″ × 16′ 4.9″ (H: 8′ 2.4″)"
+        - generic [ref=f3e47]:
+          - generic [ref=f3e48]:
+            - generic [ref=f3e49]: Width
+            - generic [ref=f3e50]:
+              - spinbutton "Room width feet" [ref=f3e51]: "13"
+              - generic [ref=f3e52]: ft
+              - spinbutton "Room width inches" [ref=f3e53]: "1.5"
+              - generic [ref=f3e54]: in
+          - generic [ref=f3e55]:
+            - generic [ref=f3e56]: Depth
+            - generic [ref=f3e57]:
+              - spinbutton "Room depth feet" [ref=f3e58]: "16"
+              - generic [ref=f3e59]: ft
+              - spinbutton "Room depth inches" [ref=f3e60]: "4.9"
+              - generic [ref=f3e61]: in
+      - generic [ref=f3e62]:
+        - button "Upload photo reference image" [ref=f3e63]
+        - generic [ref=f3e64]:
+          - generic [ref=f3e126]:
+            - img "Room photo — click to place calibration points" [ref=f3e127]
+            - 'generic "Calibration overlay: click two points on the photo to measure a known distance" [ref=f3e128]'
+            - generic: Click two points on the photo to measure a known distance
+          - generic [ref=f3e129]:
+            - paragraph [ref=f3e130]:
+              - strong [ref=f3e131]: master_suite_floor_plan_diagram.png
+              - generic [ref=f3e132]: (923 KB)
+            - generic [ref=f3e133]: Uncalibrated
+          - generic [ref=f3e134]:
+            - generic [ref=f3e135]: Known Reference Length
+            - generic [ref=f3e136]:
+              - spinbutton "Calibration reference feet" [ref=f3e137]: "3"
+              - generic [ref=f3e138]: ft
+              - spinbutton "Calibration reference inches" [ref=f3e139]: "3.4"
+              - generic [ref=f3e140]: in
+            - paragraph [ref=f3e141]: No points measured yet — click the photo above to set two points.
+            - button "Calibrate scale (3′ 3.4″ (1.00 m))" [disabled] [ref=f3e142]
+          - generic [ref=f3e143]:
+            - button "Detect room" [ref=f3e144] [cursor=pointer]
+            - button "Change photo" [ref=f3e145] [cursor=pointer]
+            - button "Remove photo" [ref=f3e146] [cursor=pointer]
+      - generic [ref=f3e73]:
+        - button "Upload furniture item image" [ref=f3e74]
+        - generic [ref=f3e75]:
+          - generic [ref=f3e76]:
+            - generic [ref=f3e77]: Furniture Image
+            - paragraph [ref=f3e78]: Upload a photo to estimate furniture dimensions
+          - button "Choose furniture image file" [ref=f3e79] [cursor=pointer]:
+            - generic [ref=f3e83]: Select furniture image
+      - region "Color palette" [ref=f3e84]:
+        - generic [ref=f3e85]:
+          - generic [ref=f3e86]: Color Palette
+          - paragraph [ref=f3e87]: Build a reusable palette, then apply colors to walls & floor.
+        - generic [ref=f3e88]:
+          - tablist "Add color method" [ref=f3e89]:
+            - tab "Image" [selected] [ref=f3e90] [cursor=pointer]
+            - tab "Picker" [ref=f3e91] [cursor=pointer]
+            - tab "Hex" [ref=f3e92] [cursor=pointer]
+            - tab "AI" [ref=f3e93] [cursor=pointer]
+          - generic [ref=f3e94]:
+            - button "Upload swatch image for color extraction" [ref=f3e95]
+            - button "Choose swatch image file" [ref=f3e96] [cursor=pointer]:
+              - generic [ref=f3e100]: Select swatch image
+            - paragraph [ref=f3e101]: Upload a paint, carpet, or flooring photo — we read its average color.
+        - generic [ref=f3e102]:
+          - generic [ref=f3e103]: Palette (0)
+          - paragraph [ref=f3e104]: No colors yet — add your first color above.
+        - generic [ref=f3e105]:
+          - generic [ref=f3e106]: Apply & Revert
+          - paragraph [ref=f3e107]: Select a color from the palette to enable apply actions.
+          - paragraph [ref=f3e108]: "Tip: click a wall segment in the 2D plan to target it individually."
+          - generic [ref=f3e109]:
+            - generic [ref=f3e110]: Whole room
+            - generic [ref=f3e111]:
+              - button "Apply color to all walls" [disabled] [ref=f3e112]
+              - button "Apply color to floor" [disabled] [ref=f3e113]
+              - button "Revert all walls" [disabled] [ref=f3e114]
+              - button "Revert floor" [disabled] [ref=f3e115]
+      - heading "Validation" [level=3] [ref=f3e116]
+      - list [ref=f3e117]:
+        - listitem [ref=f3e118]: Calibrate the measured photo with positive pixel and meter references.
+      - generic [ref=f3e119]:
+        - generic [ref=f3e120]:
+          - button "Save project" [ref=f3e121] [cursor=pointer]
+          - button "Load project" [ref=f3e122] [cursor=pointer]
+        - generic [ref=f3e123]: not-configured
+      - button "Finalize plan" [disabled] [ref=f3e125]

@@ -1,0 +1,129 @@
+- main [ref=e3]:
+  - generic [ref=e4]:
+    - text: HOME DESIGNER
+    - heading "Master Bedroom" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Measured room editor · displaying feet & inches (ft/in)
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - img "2D room plan" [ref=e9]:
+        - generic:
+          - generic "Select north wall"
+        - generic:
+          - generic "Select east wall"
+        - generic:
+          - generic "Select south wall"
+        - generic:
+          - generic "Select west wall"
+        - generic: 13′ 1.5″
+        - generic: 16′ 4.9″
+        - generic: 13′ 1.5″
+        - generic: 16′ 4.9″
+        - generic [ref=e11]: Master Bedroom
+        - generic [ref=e12]: "13′ 1.5″ × 16′ 4.9″ (H: 8′ 2.4″)"
+      - paragraph [ref=e13]: Click a wall segment to select it for color application.
+    - complementary [ref=e14]:
+      - heading "Measured plan" [level=2] [ref=e15]
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]: Display Units
+          - radiogroup "Display unit preference" [ref=e19]:
+            - button "Feet & Inches (ft/in)" [ref=e20] [cursor=pointer]
+            - button "Meters (m)" [ref=e21] [cursor=pointer]
+        - paragraph [ref=e22]: UI displays measurements in feet & inches. Storage and domain calculations remain canonical in meters (m).
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: "Current State:"
+          - generic [ref=e26]: No photo selected
+        - list [ref=e27]:
+          - listitem [ref=e28]:
+            - generic [ref=e29]: "1"
+            - generic [ref=e30]: Choose a measured room photo
+          - listitem [ref=e31]:
+            - generic [ref=e32]: "2"
+            - generic [ref=e33]: Review the reference
+          - listitem [ref=e34]:
+            - generic [ref=e35]: "3"
+            - generic [ref=e36]: Calibrate using a known measurement
+          - listitem [ref=e37]:
+            - generic [ref=e38]: "4"
+            - generic [ref=e39]: Review validation
+          - listitem [ref=e40]:
+            - generic [ref=e41]: "5"
+            - generic [ref=e42]: Finalize the plan
+      - generic [ref=e43]:
+        - heading "Room Dimensions" [level=3] [ref=e44]
+        - paragraph [ref=e45]:
+          - text: "Current:"
+          - strong [ref=e46]: "13′ 1.5″ × 16′ 4.9″ (H: 8′ 2.4″)"
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: Width
+            - generic [ref=e50]:
+              - spinbutton "Room width feet" [ref=e51]: "13"
+              - generic [ref=e52]: ft
+              - spinbutton "Room width inches" [ref=e53]: "1.5"
+              - generic [ref=e54]: in
+          - generic [ref=e55]:
+            - generic [ref=e56]: Depth
+            - generic [ref=e57]:
+              - spinbutton "Room depth feet" [ref=e58]: "16"
+              - generic [ref=e59]: ft
+              - spinbutton "Room depth inches" [ref=e60]: "4.9"
+              - generic [ref=e61]: in
+      - generic [ref=e62]:
+        - button "Upload photo reference image" [ref=e63]
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: Photo Reference
+            - paragraph [ref=e67]: Upload a room photo to calibrate & measure
+          - generic [ref=e68] [cursor=pointer]: Select room photo
+      - generic [ref=e73]:
+        - button "Upload furniture item image" [ref=e74]
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]: Furniture Image
+            - paragraph [ref=e78]: Upload a photo to estimate furniture dimensions
+          - button "Choose furniture image file" [ref=e79] [cursor=pointer]:
+            - generic [ref=e83]: Select furniture image
+      - region "Color palette" [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]: Color Palette
+          - paragraph [ref=e87]: Build a reusable palette, then apply colors to walls & floor.
+        - generic [ref=e88]:
+          - tablist "Add color method" [ref=e89]:
+            - tab "Image" [ref=e90] [cursor=pointer]
+            - tab "Picker" [ref=e91] [cursor=pointer]
+            - tab "Hex" [ref=e92] [cursor=pointer]
+            - tab "AI" [active] [selected] [ref=e93] [cursor=pointer]
+          - generic [ref=e127]:
+            - button "Upload inspiration image for AI palette extraction" [ref=e128]
+            - button "Choose inspiration image file" [ref=e129] [cursor=pointer]:
+              - generic [ref=e133]: Select inspiration image
+            - generic [ref=e134]:
+              - button "Extract palette with AI" [disabled] [ref=e135]
+              - button "Average color instead" [disabled] [ref=e136]
+            - paragraph [ref=e137]: AI reads the mood of the photo and suggests a coordinated set of colors.
+        - generic [ref=e102]:
+          - generic [ref=e103]: Palette (0)
+          - paragraph [ref=e104]: No colors yet — add your first color above.
+        - generic [ref=e105]:
+          - generic [ref=e106]: Apply & Revert
+          - paragraph [ref=e107]: Select a color from the palette to enable apply actions.
+          - paragraph [ref=e108]: "Tip: click a wall segment in the 2D plan to target it individually."
+          - generic [ref=e109]:
+            - generic [ref=e110]: Whole room
+            - generic [ref=e111]:
+              - button "Apply color to all walls" [disabled] [ref=e112]
+              - button "Apply color to floor" [disabled] [ref=e113]
+              - button "Revert all walls" [disabled] [ref=e114]
+              - button "Revert floor" [disabled] [ref=e115]
+      - heading "Validation" [level=3] [ref=e116]
+      - list [ref=e117]:
+        - listitem [ref=e118]: Calibrate the measured photo with positive pixel and meter references.
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - button "Save project" [ref=e121] [cursor=pointer]
+          - button "Load project" [ref=e122] [cursor=pointer]
+        - generic [ref=e123]: not-configured
+      - button "Reset the room and discard the current design" [ref=e125] [cursor=pointer]: Reset room
+      - button "Finalize plan" [disabled] [ref=e126]
