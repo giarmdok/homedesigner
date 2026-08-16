@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start OpenCode",
+      "type": "shell",
+      "command": "opencode",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "new",
+        "clear": true
+      }
+    }
+  ]
+}
